@@ -35,7 +35,7 @@ RUN mkdir -p /app && chown www-data:www-data /app -R && \
     rm -fr /var/www && ln -s /app /var/www
 
 WORKDIR /app
-RUN /install.sh
+RUN /build.sh
 
 EXPOSE 80
 CMD ["/run.sh"]
